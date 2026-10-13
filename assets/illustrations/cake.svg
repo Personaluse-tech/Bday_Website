@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cakePlate" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2eafc"/>
+    </linearGradient>
+    <linearGradient id="frosting1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffb3c6"/>
+      <stop offset="50%" stop-color="#ff8fab"/>
+      <stop offset="100%" stop-color="#fb6f92"/>
+    </linearGradient>
+    <linearGradient id="frosting2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fff0f3"/>
+      <stop offset="100%" stop-color="#ffccd5"/>
+    </linearGradient>
+    <linearGradient id="candleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffd166"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ffd166"/>
+    </linearGradient>
+    <radialGradient id="flameGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#ffea00"/>
+      <stop offset="70%" stop-color="#ff5400"/>
+      <stop offset="100%" stop-color="#ff0054"/>
+    </radialGradient>
+    <filter id="flameGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Cake Stand / Plate -->
+  <ellipse cx="140" cy="270" rx="120" ry="18" fill="#000000" opacity="0.08"/>
+  <ellipse cx="140" cy="265" rx="110" ry="15" fill="url(#cakePlate)" stroke="#f0f2f5" stroke-width="2"/>
+
+  <!-- Bottom Cake Tier -->
+  <rect x="50" y="190" width="180" height="65" rx="12" fill="url(#frosting1)"/>
+  <!-- Drips on bottom tier -->
+  <path d="M 50,195 Q 65,225 80,195 Q 95,230 110,195 Q 130,235 150,195 Q 170,228 190,195 Q 210,232 230,195 L 230,190 L 50,190 Z" fill="#ffffff" opacity="0.8"/>
+  
+  <!-- Sprinkles on bottom tier -->
+  <circle cx="75" cy="230" r="3" fill="#ffd166"/>
+  <circle cx="115" cy="235" r="3" fill="#70d6ff"/>
+  <circle cx="165" cy="225" r="3" fill="#ffffff"/>
+  <circle cx="205" cy="235" r="3" fill="#ff70a6"/>
+  <circle cx="140" cy="245" r="3" fill="#ffd166"/>
+
+  <!-- Top Cake Tier -->
+  <rect x="75" y="130" width="130" height="60" rx="10" fill="url(#frosting2)"/>
+  <!-- Drips on top tier -->
+  <path d="M 75,135 Q 90,165 105,135 Q 120,170 140,135 Q 160,168 180,135 Q 195,160 205,135 L 205,130 L 75,130 Z" fill="#ff8fab"/>
+
+  <!-- Cream Swirls on Top -->
+  <circle cx="85" cy="128" r="8" fill="#ffffff"/>
+  <circle cx="112" cy="126" r="8" fill="#ffffff"/>
+  <circle cx="140" cy="125" r="9" fill="#ffffff"/>
+  <circle cx="168" cy="126" r="8" fill="#ffffff"/>
+  <circle cx="195" cy="128" r="8" fill="#ffffff"/>
+
+  <!-- Strawberries / Cherries on Top -->
+  <circle cx="112" cy="120" r="6" fill="#e63946"/>
+  <circle cx="168" cy="120" r="6" fill="#e63946"/>
+
+  <!-- Birthday Candle -->
+  <g class="candle-group">
+    <!-- Candle Stick with Striping -->
+    <rect x="135" y="65" width="10" height="60" rx="4" fill="url(#candleGrad)"/>
+    <path d="M 135,78 L 145,83" stroke="#ff758f" stroke-width="3"/>
+    <path d="M 135,95 L 145,100" stroke="#ff758f" stroke-width="3"/>
+    <path d="M 135,112 L 145,117" stroke="#ff758f" stroke-width="3"/>
+
+    <!-- Candle Wick -->
+    <line x1="140" y1="65" x2="140" y2="52" stroke="#2b2d42" stroke-width="2"/>
+
+    <!-- Glowing Animated Flame (Interactive Target) -->
+    <g id="candleFlame" class="candle-flame" filter="url(#flameGlow)">
+      <ellipse cx="140" cy="38" rx="8" ry="16" fill="url(#flameGrad)"/>
+      <ellipse cx="140" cy="40" rx="4" ry="9" fill="#ffffff"/>
+      <circle cx="140" cy="35" r="18" fill="#ffd166" opacity="0.25"/>
+    </g>
+
+    <!-- Smoke (hidden initially, shown on blow) -->
+    <g id="candleSmoke" class="candle-smoke" opacity="0">
+      <path d="M 140,50 Q 130,35 145,20 Q 135,5 140,-5" fill="none" stroke="#d3d3d3" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    </g>
+  </g>
+</svg>

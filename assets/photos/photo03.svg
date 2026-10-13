@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cdb4db"/>
+      <stop offset="50%" stop-color="#ffc8dd"/>
+      <stop offset="100%" stop-color="#ffafcc"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="500" rx="20" fill="url(#bg3)"/>
+  
+  <!-- Cozy Sleepover / Snacks & Pizza scene -->
+  <g transform="translate(140, 90)">
+    <!-- Pizza Box -->
+    <polygon points="40,160 180,160 210,210 10,210" fill="#f4a261"/>
+    <polygon points="40,160 180,160 150,110 70,110" fill="#e76f51"/>
+    <circle cx="110" cy="185" r="18" fill="#e63946"/>
+    <circle cx="70" cy="185" r="14" fill="#e63946"/>
+    <circle cx="150" cy="185" r="15" fill="#e63946"/>
+
+    <!-- Glowing Phone with text bubbles -->
+    <rect x="75" y="10" width="70" height="110" rx="10" fill="#22223b" stroke="#ffffff" stroke-width="2"/>
+    <rect x="85" y="30" width="50" height="16" rx="6" fill="#a2d2ff"/>
+    <rect x="85" y="55" width="40" height="16" rx="6" fill="#ffafcc"/>
+    <rect x="85" y="80" width="50" height="16" rx="6" fill="#a2d2ff"/>
+  </g>
+
+  <text x="250" y="375" font-family="'Caveat', cursive, sans-serif" font-size="32" font-weight="bold" fill="#4a154b" text-anchor="middle">“3 AM snacks & existential questions”</text>
+  <text x="250" y="415" font-family="'Outfit', sans-serif" font-size="16" fill="#7209b7" opacity="0.8" text-anchor="middle">THE SLEEPOVER TAPES • ROOM 402</text>
+</svg>

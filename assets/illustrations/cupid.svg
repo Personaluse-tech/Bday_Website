@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cupidSkin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe4d6"/>
+      <stop offset="100%" stop-color="#fcd5ce"/>
+    </linearGradient>
+    <linearGradient id="cupidHair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffb703"/>
+      <stop offset="100%" stop-color="#fb8500"/>
+    </linearGradient>
+    <linearGradient id="wingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ffccd5"/>
+    </linearGradient>
+    <linearGradient id="bowGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe66d"/>
+      <stop offset="100%" stop-color="#ffb703"/>
+    </linearGradient>
+    <filter id="glowCupid" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Angel Wings with soft fluttering float -->
+  <g class="wings">
+    <!-- Left Wing -->
+    <path d="M 110,130 C 50,70 30,120 40,160 C 50,190 90,180 115,160 Z" fill="url(#wingGrad)" opacity="0.95" filter="url(#glowCupid)"/>
+    <!-- Right Wing -->
+    <path d="M 190,130 C 250,70 270,120 260,160 C 250,190 210,180 185,160 Z" fill="url(#wingGrad)" opacity="0.95" filter="url(#glowCupid)"/>
+  </g>
+
+  <!-- Cute Halo -->
+  <ellipse cx="150" cy="55" rx="36" ry="10" fill="none" stroke="#ffd166" stroke-width="5" opacity="0.9" filter="url(#glowCupid)"/>
+
+  <!-- Body / Chibi Toga -->
+  <path d="M 125,145 C 120,200 130,225 150,225 C 170,225 180,200 175,145 Z" fill="#ffffff" opacity="0.95"/>
+  <path d="M 125,150 C 140,170 160,170 175,150" fill="none" stroke="#ffb4a2" stroke-width="3"/>
+  <path d="M 130,170 C 145,185 155,185 170,170" fill="none" stroke="#ffb4a2" stroke-width="2"/>
+
+  <!-- Little Feet -->
+  <circle cx="138" cy="230" r="10" fill="url(#cupidSkin)"/>
+  <circle cx="162" cy="230" r="10" fill="url(#cupidSkin)"/>
+
+  <!-- Head -->
+  <circle cx="150" cy="115" r="48" fill="url(#cupidSkin)"/>
+
+  <!-- Curly Blonde Hair -->
+  <path d="M 108,110 C 100,80 120,60 150,60 C 180,60 200,80 192,110 C 185,85 170,75 150,75 C 130,75 115,85 108,110 Z" fill="url(#hairGrad)"/>
+  <circle cx="112" cy="95" r="12" fill="#fb8500"/>
+  <circle cx="130" cy="72" r="14" fill="#fb8500"/>
+  <circle cx="155" cy="70" r="15" fill="#fb8500"/>
+  <circle cx="178" cy="76" r="14" fill="#fb8500"/>
+  <circle cx="188" cy="95" r="12" fill="#fb8500"/>
+
+  <!-- Cheerful / Cheeky Expression -->
+  <!-- Cute Anime Eyes -->
+  <ellipse cx="134" cy="116" rx="5.5" ry="7" fill="#4a0e2e"/>
+  <ellipse cx="166" cy="116" rx="5.5" ry="7" fill="#4a0e2e"/>
+  <circle cx="136" cy="113" r="2.5" fill="#ffffff"/>
+  <circle cx="168" cy="113" r="2.5" fill="#ffffff"/>
+  <circle cx="132" cy="118" r="1.2" fill="#ffffff"/>
+  <circle cx="164" cy="118" r="1.2" fill="#ffffff"/>
+
+  <!-- Blush Cheeks -->
+  <ellipse cx="122" cy="126" rx="9" ry="5.5" fill="#ff758f" opacity="0.6"/>
+  <ellipse cx="178" cy="126" rx="9" ry="5.5" fill="#ff758f" opacity="0.6"/>
+
+  <!-- Smug / Playful Little Smile -->
+  <path d="M 143,128 Q 150,135 157,128" fill="none" stroke="#a4133c" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Arms holding Golden Bow -->
+  <!-- Left Arm -->
+  <path d="M 125,145 C 110,148 95,142 85,150" fill="none" stroke="url(#cupidSkin)" stroke-width="10" stroke-linecap="round"/>
+  <!-- Right Arm pulling arrow back -->
+  <path d="M 175,145 C 190,148 200,152 210,158" fill="none" stroke="url(#cupidSkin)" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Golden Bow -->
+  <g class="cupid-bow" transform="translate(10, 0)">
+    <path d="M 75,100 Q 60,150 75,200" fill="none" stroke="url(#bowGold)" stroke-width="6" stroke-linecap="round" filter="url(#glowCupid)"/>
+    <!-- Bow String -->
+    <path d="M 75,100 Q 140,150 75,200" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="3,1"/>
+    
+    <!-- Heart Arrow -->
+    <g class="cupid-arrow">
+      <line x1="60" y1="150" x2="150" y2="150" stroke="#ffd166" stroke-width="3.5" stroke-linecap="round"/>
+      <!-- Glowing Arrowhead Heart -->
+      <path d="M 50,150 C 45,143 38,143 35,147 C 32,151 35,155 50,165 C 65,155 68,151 65,147 C 62,143 55,143 50,150 Z" 
+            fill="#ff0055" filter="url(#glowCupid)" transform="rotate(90 50 150) translate(0, -5)"/>
+      <!-- Arrow Feathers -->
+      <polygon points="145,145 155,150 145,155" fill="#ffffff"/>
+      <polygon points="135,145 145,150 135,155" fill="#ffb4a2"/>
+    </g>
+  </g>
+
+  <!-- Sparkles around Cupid -->
+  <path d="M 60,70 L 63,80 L 73,83 L 63,86 L 60,96 L 57,86 L 47,83 L 57,80 Z" fill="#ffd166" opacity="0.85"/>
+  <path d="M 230,80 L 232,88 L 240,90 L 232,92 L 230,100 L 228,92 L 220,90 L 228,88 Z" fill="#ff758f" opacity="0.85"/>
+</svg>

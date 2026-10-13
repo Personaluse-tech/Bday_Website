@@ -1,0 +1,88 @@
+/* ==============================================================================
+   HER LITTLE UNIVERSE — KEYFRAME ANIMATIONS & MOTION
+   ============================================================================== */
+
+@keyframes gentlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes softBreathe {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.9; }
+}
+
+@keyframes heartThrob {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 77, 109, 0.4); }
+  50% { transform: scale(1.12); box-shadow: 0 0 35px rgba(255, 77, 109, 0.8); }
+}
+
+@keyframes starTwinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+@keyframes lockShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px) rotate(-5deg); }
+  40%, 80% { transform: translateX(8px) rotate(5deg); }
+}
+
+@keyframes cupidHover {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(3deg); }
+}
+
+@keyframes arrowFlyAcross {
+  0% { transform: translate(-100px, 100px) rotate(-35deg) scale(0.5); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translate(250px, -150px) rotate(-35deg) scale(1.2); opacity: 0; }
+}
+
+@keyframes flameFlicker {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.05, 0.95) rotate(-2deg); }
+  50% { transform: scale(0.95, 1.08) rotate(1deg); }
+  75% { transform: scale(1.02, 0.98) rotate(3deg); }
+}
+
+@keyframes smokeRise {
+  0% { opacity: 0.8; transform: translateY(0) scale(0.8); }
+  100% { opacity: 0; transform: translateY(-40px) scale(1.8); }
+}
+
+@keyframes flashAnimation {
+  0% { opacity: 0.9; }
+  100% { opacity: 0; }
+}
+
+/* Applied Animation Classes */
+.cupid-character {
+  animation: cupidHover 3.5s infinite ease-in-out;
+}
+
+.candle-flame {
+  transform-origin: 140px 50px;
+  animation: flameFlicker 0.18s infinite alternate ease-in-out;
+}
+
+.candle-smoke.rise {
+  animation: smokeRise 1.8s forwards ease-out;
+}
+
+.shake-anim {
+  animation: lockShake 0.4s ease-in-out;
+}
+
+.flash-active {
+  animation: flashAnimation 0.5s ease-out forwards;
+}
+
+/* Prefers Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
