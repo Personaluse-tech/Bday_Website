@@ -173,7 +173,7 @@ const BIRTHDAY_CONFIG = {
       title: "Where It All Began",
       date: "Chapter 1",
       caption: "Two strangers who somehow decided to share one collective brain cell.",
-      image: "assets/photos/photo01.svg",
+      image: "/assets/photos/photo01.svg",
       tag: "Origins ✨"
     },
     {
@@ -181,7 +181,7 @@ const BIRTHDAY_CONFIG = {
       title: "That Unforgettable Day",
       date: "Pure Chaos",
       caption: "Laughing so hard we couldn't breathe in public. Zero regrets.",
-      image: "assets/photos/photo02.svg",
+      image: "/assets/photos/photo02.svg",
       tag: "Unfiltered 😂"
     },
     {
@@ -189,7 +189,7 @@ const BIRTHDAY_CONFIG = {
       title: "Comfort in the Chaos",
       date: "Safe Space",
       caption: "Proof that we can do absolutely nothing together and still have the best time.",
-      image: "assets/photos/photo03.svg",
+      image: "/assets/photos/photo03.svg",
       tag: "Comfort ☕"
     },
     {
@@ -197,7 +197,7 @@ const BIRTHDAY_CONFIG = {
       title: "Suspiciously Romantic Era",
       date: "Plot Twist",
       caption: "Looking like a main-character couple in a movie when it's literally just us getting snacks.",
-      image: "assets/photos/photo04.svg",
+      image: "/assets/photos/photo04.svg",
       tag: "For The Plot 🎬"
     },
     {
@@ -205,7 +205,7 @@ const BIRTHDAY_CONFIG = {
       title: "Late Night Heart-to-Hearts",
       date: "3:00 AM",
       caption: "Solving all the universe's problems from our bed.",
-      image: "assets/photos/photo05.svg",
+      image: "/assets/photos/photo05.svg",
       tag: "Deep Talks 🌙"
     },
     {
@@ -213,7 +213,7 @@ const BIRTHDAY_CONFIG = {
       title: "To A Million More Chapters",
       date: "Always & Forever",
       caption: "I wouldn't trade our story for anything in the world.",
-      image: "assets/photos/photo06.svg",
+      image: "/assets/photos/photo06.svg",
       tag: "Eternal 💖"
     }
   ],
@@ -252,7 +252,7 @@ const BIRTHDAY_CONFIG = {
     secretFoundTitle: "✨ You Found The Secret Star! ✨",
     secretMessage: "“You actually explored every little corner. You know me too well. Here's a reminder: I will always be proud of you, rooting for you, and screaming for you in the front row of your life. Forever and always.”",
     secretSign: "— From your #1 fan & best friend for life ❤️",
-    secretImage: "assets/photos/secret.svg"
+    secretImage: "/assets/photos/secret.svg"
   }
 };
 

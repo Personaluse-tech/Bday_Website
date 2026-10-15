@@ -17,18 +17,18 @@ class SoundEngine {
 
     // Optional audio file paths (if user adds mp3s to assets)
     this.audioFiles = {
-      pop: "assets/sounds/balloon-pop.mp3",
-      whoosh: "assets/sounds/arrow-whoosh.mp3",
-      heartBoom: "assets/sounds/heart-explosion.mp3",
-      unlock: "assets/sounds/unlock.mp3",
-      keyClick: "assets/sounds/key-click.mp3",
-      envelope: "assets/sounds/envelope.mp3",
-      paperRustle: "assets/sounds/paper.mp3",
-      scratch: "assets/sounds/scratch.mp3",
-      shutter: "assets/sounds/camera-shutter.mp3",
-      blow: "assets/sounds/candle-blow.mp3",
-      celebration: "assets/sounds/final-celebration.mp3",
-      starChime: "assets/sounds/chime.mp3"
+      pop: "/assets/sounds/balloon-pop.mp3",
+      whoosh: "/assets/sounds/arrow-whoosh.mp3",
+      heartBoom: "/assets/sounds/heart-explosion.mp3",
+      unlock: "/assets/sounds/unlock.mp3",
+      keyClick: "/assets/sounds/key-click.mp3",
+      envelope: "/assets/sounds/envelope.mp3",
+      paperRustle: "/assets/sounds/paper.mp3",
+      scratch: "/assets/sounds/scratch.mp3",
+      shutter: "/assets/sounds/camera-shutter.mp3",
+      blow: "/assets/sounds/candle-blow.mp3",
+      celebration: "/assets/sounds/final-celebration.mp3",
+      starChime: "/assets/sounds/chime.mp3"
     };
 
     // Preloaded Audio instances
@@ -74,7 +74,7 @@ class SoundEngine {
     // Try HTML5 Audio first
     try {
       if (!this.bgMusic) {
-        this.bgMusic = new Audio("assets/music/background.mp3");
+        this.bgMusic = new Audio("/assets/music/background.mp3");
         this.bgMusic.loop = true;
         this.bgMusic.volume = 0.35;
       }

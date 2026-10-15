@@ -306,7 +306,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       title: "Where It All Began",
       date: "Chapter 1",
       caption: "Two strangers who somehow decided to share one collective brain cell.",
-      image: "assets/photos/photo01.png",
+      image: "/assets/photos/photo01.png",
       tag: "Origins ✨"
     },
     {
@@ -314,7 +314,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       title: "That Unforgettable Day",
       date: "Pure Chaos",
       caption: "Laughing so hard we couldn't breathe in public. Zero regrets.",
-      image: "assets/photos/photo02.png",
+      image: "/assets/photos/photo02.png",
       tag: "Unfiltered 😂"
     },
     {
@@ -322,7 +322,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       title: "Comfort in the Chaos",
       date: "Safe Space",
       caption: "Proof that we can do absolutely nothing together and still have the best time.",
-      image: "assets/photos/photo03.jpeg",
+      image: "/assets/photos/photo03.jpeg",
       tag: "Comfort ☕"
     },
     {
@@ -330,7 +330,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       title: "Suspiciously Romantic Era",
       date: "Plot Twist",
       caption: "Looking like a main-character couple in a movie when it's literally just us getting snacks.",
-      image: "assets/photos/photo04.png",
+      image: "/assets/photos/photo04.png",
       tag: "For The Plot 🎬"
     },
     {
@@ -338,7 +338,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       title: "Late Night Heart-to-Hearts",
       date: "3:00 AM",
       caption: "Solving all the universe's problems from our bed.",
-      image: "assets/photos/photo05.png",
+      image: "/assets/photos/photo05.png",
       tag: "Deep Talks 🌙"
     },
     {
@@ -346,7 +346,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       title: "To A Million More Chapters",
       date: "Always & Forever",
       caption: "I wouldn't trade our story for anything in the world.",
-      image: "assets/photos/photo06.png",
+      image: "/assets/photos/photo06.png",
       tag: "Eternal 💖"
     }
   ],
@@ -376,7 +376,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     secretFoundTitle: "✨ You Found The Secret Star! ✨",
     secretMessage: "“You actually explored every little corner. You know me too well. Here's a reminder: I will always be proud of you, rooting for you, and screaming for you in the front row of your life. Forever and always.”",
     secretSign: "— From your #1 fan & best friend for life ❤️",
-    secretImage: "assets/photos/secret.png"
+    secretImage: "/assets/photos/secret.png"
   },
 
   postBirthday: {
@@ -402,7 +402,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
           name: "Pip",
           personality: "The Sweet One",
           tagline: "Overflowing with pure soft love",
-          illustration: "assets/illustrations/penguin-sweet.svg",
+          illustration: "/assets/illustrations/penguin-sweet.svg",
           message: "You deserve every beautiful thing this world has to offer. ❤️",
           footnote: "— Your sweetest cheerleader forever",
           badgeColor: "bg-[#ff758f]"
@@ -412,7 +412,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
           name: "Pops",
           personality: "The Chaotic One",
           tagline: "Dangerously unfiltered",
-          illustration: "assets/illustrations/penguin-chaotic.svg",
+          illustration: "/assets/illustrations/penguin-chaotic.svg",
           message: "Unfortunately, you're stuck with me. No refunds. 😂",
           footnote: "— Contract signed in permanent marker",
           badgeColor: "bg-[#8338ec]"
@@ -422,7 +422,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
           name: "Pepe",
           personality: "The Secretly Emotional One",
           tagline: "Acts tough, actually a softie",
-          illustration: "assets/illustrations/penguin-emotional.svg",
+          illustration: "/assets/illustrations/penguin-emotional.svg",
           message: "Even on ordinary days, you're one of my favorite people.",
           footnote: "— Quietly loving you every single day",
           badgeColor: "bg-[#3a86ff]"
@@ -440,7 +440,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
           title: "First Cafe Date",
           date: "Chapter 1",
           caption: "Us being us: talking for 5 hours straight without noticing the time.",
-          image: "assets/photos/photo01.png",
+          image: "/assets/photos/photo01.png",
           tag: "Origins ✨",
           washiColor: "#ffccd5",
           rotation: -2
@@ -450,7 +450,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
           title: "Public Embarrassment",
           date: "Pure Chaos",
           caption: "The chaos never ends. Laughing so loud in public people stared.",
-          image: "assets/photos/photo02.png",
+          image: "/assets/photos/photo02.png",
           tag: "Unfiltered 😂",
           washiColor: "#c9ada7",
           rotation: 3
@@ -460,7 +460,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
           title: "Zero Thoughts",
           date: "Safe Space",
           caption: "Proof that we share one brain cell and wouldn't have it any other way.",
-          image: "assets/photos/photo03.jpeg",
+          image: "/assets/photos/photo03.jpeg",
           tag: "Comfort ☕",
           washiColor: "#ffd166",
           rotation: -1
@@ -470,7 +470,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
           title: "Suspiciously Romantic Era",
           date: "Plot Twist",
           caption: "Looking like a main-character couple in a movie when it's literally just us getting snacks.",
-          image: "assets/photos/photo04.png",
+          image: "/assets/photos/photo04.png",
           tag: "For The Plot 🎬",
           washiColor: "#ff758f",
           rotation: 2
@@ -480,7 +480,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
           title: "Late Night Debriefs",
           date: "3:00 AM",
           caption: "Solving all the universe's problems from our bed until our eyes hurt.",
-          image: "assets/photos/photo05.png",
+          image: "/assets/photos/photo05.png",
           tag: "Deep Talks 🌙",
           washiColor: "#b5e2fa",
           rotation: -3
@@ -490,7 +490,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
           title: "A Memory I Want To Keep Forever",
           date: "Always & Forever",
           caption: "One of my absolute favorite days. I wouldn't trade our story for anything in the world.",
-          image: "assets/photos/photo06.png",
+          image: "/assets/photos/photo06.png",
           tag: "Eternal 💖",
           washiColor: "#f4a261",
           rotation: 1
@@ -500,7 +500,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
           title: "Midnight Munchies",
           date: "2:00 AM",
           caption: "Emergency 2 AM Pizza & Gossip with zero regrets and full bellies.",
-          image: "assets/photos/photo07.png",
+          image: "/assets/photos/photo07.png",
           tag: "Snack Run 🍕",
           washiColor: "#ffb3c6",
           rotation: -2
@@ -510,7 +510,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
           title: "Sunset Watchers",
           date: "Golden Hour",
           caption: "Chasing sunsets with my person. Wherever you go, I go.",
-          image: "assets/photos/photo08.png",
+          image: "/assets/photos/photo08.png",
           tag: "Golden Era 🌅",
           washiColor: "#ffe6a7",
           rotation: 2
@@ -520,7 +520,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
           title: "Photobooth Madness",
           date: "Strip #47",
           caption: "Proof that we cannot be left unsupervised near a camera booth.",
-          image: "assets/photos/photo09.png",
+          image: "/assets/photos/photo09.png",
           tag: "Crazy Poses 📸",
           washiColor: "#e8dff5",
           rotation: -1
@@ -530,7 +530,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
           title: "Pinky Promise",
           date: "Till 90",
           caption: "Stuck with each other till we're 90 years old. A lifetime contract signed with love.",
-          image: "assets/photos/photo10.png",
+          image: "/assets/photos/photo10.png",
           tag: "Promise 🤙",
           washiColor: "#fcd5ce",
           rotation: 3

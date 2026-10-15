@@ -59,11 +59,11 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
 ```
 
 ### 2. Replace Photos
-Place your photos in `assets/photos/`:
-- `photo01.svg` / `photo01.jpg`
-- `photo02.svg` / `photo02.jpg`
-- ... up to `photo06.jpg`
-- `secret.svg` / `secret.jpg` (for the Easter egg)
+Place your photos in `public/assets/photos/`:
+- `photo01.png` / `photo01.jpg`
+- `photo02.png` / `photo02.jpg`
+- ... up to `photo10.png`
+- `secret.png` / `secret.jpg` (for the Easter egg)
 
 Then update the paths in `BIRTHDAY_CONFIG.memories` inside [`src/config.ts`](file:///c:/Users/nskab_hoawqow/Desktop/Bday_Website/src/config.ts).
 
@@ -73,6 +73,13 @@ Then update the paths in `BIRTHDAY_CONFIG.memories` inside [`src/config.ts`](fil
 
 ```
 Bday_Website/
+├── public/
+│   └── assets/
+│       ├── animations/      # Animations and video clips
+│       ├── illustrations/   # SVGs (Gift box, Penguins, Cupid, Cake)
+│       ├── music/           # Background music folder
+│       ├── photos/          # Memories and Easter egg photographs
+│       └── sounds/          # Sound effects folder
 ├── src/
 │   ├── config.ts            # Central typed configuration (texts, password, photos)
 │   ├── App.tsx              # Master state machine & scene orchestrator
@@ -98,11 +105,6 @@ Bday_Website/
 │       ├── SceneHiddenFinal.tsx
 │       ├── SceneCelebration.tsx
 │       └── EasterEggModal.tsx
-├── assets/
-│   ├── illustrations/       # SVGs (Cupid, Cake, Balloons)
-│   ├── photos/              # Memories and Easter egg illustrations/photos
-│   ├── sounds/              # Sound effects folder
-│   └── music/               # Background music folder
 ├── package.json
 ├── vite.config.ts
 └── tsconfig.json

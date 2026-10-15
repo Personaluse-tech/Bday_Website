@@ -42,7 +42,7 @@ class SoundService {
     if (!this.isEnabled || this.isMuted) return;
     try {
       if (!this.bgMusic) {
-        this.bgMusic = new Audio('assets/music/background.mp3');
+        this.bgMusic = new Audio('/assets/music/background.mp3');
         this.bgMusic.loop = true;
         this.bgMusic.volume = 0.35;
       }

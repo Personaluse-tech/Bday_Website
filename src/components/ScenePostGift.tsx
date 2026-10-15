@@ -85,7 +85,7 @@ export const ScenePostGift: React.FC<Props> = ({ onNext }) => {
                 className="w-44 h-44 sm:w-48 sm:h-48 mb-3"
               >
                 <img
-                  src="assets/illustrations/gift-box.svg"
+                  src="/assets/illustrations/gift-box.svg"
                   alt="Gift for Anifa"
                   className="w-full h-full object-contain filter drop-shadow-md"
                 />
@@ -138,7 +138,7 @@ export const ScenePostGift: React.FC<Props> = ({ onNext }) => {
                 className="w-48 h-48 sm:w-52 sm:h-52 mb-3"
               >
                 <img
-                  src="assets/illustrations/gift-box-open.svg"
+                  src="/assets/illustrations/gift-box-open.svg"
                   alt="Opened Gift"
                   className="w-full h-full object-contain filter drop-shadow-lg"
                 />
