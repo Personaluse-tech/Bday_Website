@@ -33,6 +33,7 @@ export const SceneEnvelope: React.FC<Props> = ({ onNext }) => {
 
       {/* 3D Envelope */}
       <div 
+        id="open-envelope-btn"
         onClick={handleOpenEnvelope}
         className="w-[280px] h-[190px] relative cursor-pointer mb-6"
       >
@@ -104,6 +105,7 @@ export const SceneEnvelope: React.FC<Props> = ({ onNext }) => {
               </div>
 
               <button
+                id="close-letter-btn"
                 onClick={handleCloseLetter}
                 className="w-full py-3.5 px-6 rounded-full bg-gradient-to-r from-[#ff4d6d] to-[#ff758f] text-white font-semibold text-xs shadow-md active:scale-95 transition-transform mt-6 cursor-pointer"
               >

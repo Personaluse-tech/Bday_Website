@@ -44,20 +44,26 @@ export const SceneBalloons: React.FC<Props> = ({ onNext }) => {
     if (nextPopped >= 2) {
       setTimeout(() => {
         onNext();
-      }, 700);
+      }, 500);
     }
   };
 
   return (
-    <div className="w-full h-full relative overflow-hidden flex flex-col items-center justify-between py-12">
-      <div className="absolute inset-0 pointer-events-auto">
+    <div className="w-full h-full relative overflow-hidden flex flex-col items-center justify-between pt-3 pb-6 px-4 select-none">
+      {/* Top Helper Badge */}
+      <div className="relative z-30 bg-white/85 backdrop-blur-md px-5 py-2 rounded-full text-xs font-semibold text-[#c9184a] shadow-xs border border-white/80 shrink-0">
+        Tap the floating balloons! 🎈✨ ({poppedCount}/2)
+      </div>
+
+      {/* Floating Balloons Canvas (pointer-events-none on wrapper so clicks reach buttons) */}
+      <div className="absolute inset-0 pointer-events-none z-10 overflow-hidden">
         <AnimatePresence>
           {balloons.map(b => (
             <motion.div
               key={b.id}
               initial={{ y: '105vh', x: 0, opacity: 0.95 }}
               animate={{ 
-                y: '-20vh', 
+                y: '-25vh', 
                 x: [0, (b.id % 2 === 0 ? 15 : -15), 0],
                 opacity: 1
               }}
@@ -66,13 +72,8 @@ export const SceneBalloons: React.FC<Props> = ({ onNext }) => {
                 y: { duration: b.duration, delay: b.delay, ease: 'linear' },
                 x: { duration: 3, repeat: Infinity, ease: 'easeInOut' }
               }}
-              onAnimationComplete={() => {
-                if (balloons.length <= 2) {
-                  onNext();
-                }
-              }}
               onClick={() => popBalloon(b.id)}
-              className="absolute w-[68px] h-[88px] rounded-[50%_50%_50%_50%/40%_40%_60%_60%] cursor-pointer shadow-lg active:scale-90 transition-transform"
+              className="absolute w-[72px] h-[92px] rounded-[50%_50%_50%_50%/40%_40%_60%_60%] cursor-pointer shadow-lg active:scale-90 transition-transform pointer-events-auto"
               style={{
                 left: `${b.left}%`,
                 background: b.color
@@ -84,16 +85,16 @@ export const SceneBalloons: React.FC<Props> = ({ onNext }) => {
         </AnimatePresence>
       </div>
 
-      <div className="z-10 bg-white/70 backdrop-blur-md px-4 py-2 rounded-full text-xs font-medium text-[#c9184a] shadow-sm">
-        Tap the floating balloons! 🎈✨
+      {/* Skip Button Pill with relative z-30 and pointer-events-auto */}
+      <div className="relative z-30 shrink-0 pb-2">
+        <button
+          id="skip-balloons-btn"
+          onClick={onNext}
+          className="h-11 px-7 rounded-full bg-white/90 backdrop-blur-md border border-white/90 shadow-sm text-xs font-semibold text-[#843b62] hover:text-[#c9184a] active:scale-95 transition-all cursor-pointer flex items-center justify-center gap-1.5 pointer-events-auto"
+        >
+          <span>Skip sequence →</span>
+        </button>
       </div>
-
-      <button
-        onClick={onNext}
-        className="z-10 text-xs text-[#843b62]/70 underline py-2 cursor-pointer"
-      >
-        Skip sequence →
-      </button>
     </div>
   );
 };

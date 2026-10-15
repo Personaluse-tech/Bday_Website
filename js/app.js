@@ -48,7 +48,7 @@ class BirthdayApp {
   applyConfigToDOM() {
     // Insert Name and dynamic strings
     const nameEls = document.querySelectorAll(".var-recipient-name");
-    nameEls.forEach(el => el.textContent = this.config.recipientName || "Maya");
+    nameEls.forEach(el => el.textContent = this.config.recipientName || "Anifa");
 
     const senderEls = document.querySelectorAll(".var-sender-name");
     senderEls.forEach(el => el.textContent = this.config.senderName || "Your Bestie");
@@ -366,7 +366,7 @@ class BirthdayApp {
   }
 
   validatePasscode(feedback, lockIcon) {
-    const correctCode = this.config.secretPassword || "0824";
+    const correctCode = this.config.secretPassword || "1517";
 
     if (this.passcodeEntered === correctCode) {
       // Success!

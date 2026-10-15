@@ -55,6 +55,7 @@ export const SceneFilmReel: React.FC<Props> = ({ onNext }) => {
 
       {currentIdx >= memories.length - 1 && (
         <motion.button
+          id="film-next-btn"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           onClick={onNext}

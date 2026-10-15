@@ -12,7 +12,7 @@ A cinematic, emotional, playful, and interactive **mobile-only birthday experien
 2. **Interactive Floating Balloons**: Floating balloons with realistic pop physics and sound effects.
 3. **Cupid / Angel Drama**: Cute chibi cupid with animated bow and playful dialogue: *"Fine. I guess I have to do this myself."*
 4. **Giant Heart Impact**: Arrow hit $\rightarrow$ BOOM particle explosion into typography and humorous best-friend banter.
-5. **Secret Vault Passcode**: Sleek numeric keypad with customizable 4-digit code (Default: `0824`), gentle cycling friendship quotes, and playful wrong attempt teasers.
+5. **Secret Vault Passcode**: Sleek numeric keypad with customizable 4-digit code, gentle cycling friendship quotes, and playful wrong attempt teasers.
 6. **Little Universe Loading**: Ambient night sky stepper collecting hugs, unspoken wishes, and chaotic memories before unlocking a 20-star galaxy.
 7. **Interactive Stars**: Tap glowing stars to reveal heartfelt and hilarious bestie memories.
 8. **Love & Friendship Quote Cards**: Dreamy typography cards cycling through emotional & playful thoughts.
@@ -50,10 +50,10 @@ All customizations are in one single file: [`src/config.ts`](file:///c:/Users/ns
 ### 1. Change Name, Password & Age
 ```typescript
 export const BIRTHDAY_CONFIG: BirthdayConfig = {
-  recipientName: "Maya",        // Her name
+  recipientName: "Anifa",       // Her name
   senderName: "Your Bestie",    // Your name/nickname
   age: 21,                      // Her birthday age
-  secretPassword: "0824",       // 4-digit passcode for vault
+  secretPassword: "1517",       // 4-digit passcode for vault
   ...
 };
 ```

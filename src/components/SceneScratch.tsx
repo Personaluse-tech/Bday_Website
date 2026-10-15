@@ -131,6 +131,7 @@ export const SceneScratch: React.FC<Props> = ({ onNext }) => {
       </div>
 
       <motion.button
+        id="scratch-proceed-btn"
         animate={isRevealed ? { scale: [1, 1.05, 1], opacity: 1 } : { opacity: 0.5 }}
         onClick={onNext}
         className="py-3.5 px-8 rounded-full bg-gradient-to-r from-[#ff4d6d] to-[#ff758f] text-white font-semibold text-sm shadow-md active:scale-95 transition-transform cursor-pointer"

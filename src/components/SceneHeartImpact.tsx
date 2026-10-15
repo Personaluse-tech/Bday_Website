@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { sound } from '../utils/sound';
 import { BIRTHDAY_CONFIG } from '../config';
 
 interface Props {
@@ -8,61 +7,90 @@ interface Props {
 }
 
 export const SceneHeartImpact: React.FC<Props> = ({ onNext }) => {
-  const [exploded, setExploded] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setExploded(true);
-      sound.playHeartBoom();
-    }, 400);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center">
-      {!exploded ? (
-        <motion.div
-          initial={{ scale: 0.2, opacity: 0 }}
-          animate={{ scale: [1, 1.2, 1], opacity: 1 }}
-          className="w-28 h-28 bg-gradient-to-tr from-[#ff4d6d] to-[#c9184a] rotate-[-45deg] relative shadow-[0_0_40px_rgba(255,77,109,0.8)] before:content-[''] before:w-28 before:h-28 before:bg-inherit before:rounded-full before:absolute before:-top-14 before:left-0 after:content-[''] after:w-28 after:h-28 after:bg-inherit after:rounded-full after:absolute after:top-0 after:left-14"
-        />
-      ) : (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col items-center max-w-[310px]"
-        >
-          <motion.h2 
-            initial={{ y: -10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            className="font-serif text-2xl text-[#c9184a] font-bold mb-1"
-          >
-            {BIRTHDAY_CONFIG.cupidBanter.afterImpact1}
-          </motion.h2>
-          <p className="text-sm text-[#6b535d] mb-5">
-            {BIRTHDAY_CONFIG.cupidBanter.afterImpact2}
-          </p>
+    <div className="w-full h-full flex flex-col items-center justify-between py-6 px-5 text-center select-none overflow-y-auto">
+      {/* Top Heading Group */}
+      <motion.div
+        initial={{ opacity: 0, y: -15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col items-center shrink-0 pt-2"
+      >
+        <span className="text-3xl mb-1 filter drop-shadow-[0_2px_8px_rgba(255,77,109,0.4)]">
+          💘✨
+        </span>
+        <h1 className="font-serif text-2xl sm:text-3xl text-[#c9184a] font-bold tracking-tight">
+          HAPPY BIRTHDAY, {BIRTHDAY_CONFIG.recipientName.toUpperCase()}! ❤️
+        </h1>
+        <p className="text-xs sm:text-sm text-[#6b535d] mt-1 font-medium">
+          to my favorite human in the entire universe.
+        </p>
+      </motion.div>
 
-          <div className="bg-white/85 backdrop-blur-md rounded-2xl p-4 shadow-sm flex flex-col gap-2.5 text-left mb-6 w-full">
-            {BIRTHDAY_CONFIG.cupidBanter.playfulBanter.map((line, idx) => (
-              <p 
-                key={idx} 
-                className={`text-xs leading-relaxed ${idx === 3 ? 'font-handwriting text-lg text-[#c9184a] font-bold text-center' : 'text-[#2b1b22]'}`}
-              >
-                {line}
-              </p>
-            ))}
+      {/* Playful Bestie Banter Card */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.94, y: 15 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="w-full max-w-[340px] sm:max-w-[360px] bg-white/95 backdrop-blur-md rounded-3xl p-5 sm:p-6 shadow-[0_8px_30px_rgba(201,24,74,0.08)] border border-white/95 flex flex-col gap-3.5 my-auto text-left box-border min-w-0"
+      >
+        <div className="flex items-center justify-between border-b border-[#ffe5ec] pb-2.5">
+          <span className="text-[11px] font-semibold text-[#ff4d6d] tracking-wider uppercase">
+            Official Bestie Dialogue
+          </span>
+          <span className="text-xs text-[#ffd166]">✦ ✦ ✦</span>
+        </div>
+
+        <div className="flex flex-col gap-2.5 min-w-0">
+          {/* Dialogue Lines with comfortable internal padding */}
+          <div className="bg-[#fff0f3] rounded-2xl px-4 py-3 border border-[#ffd1dc]/60">
+            <p className="text-xs sm:text-sm text-[#2b1b22] font-medium leading-relaxed break-words">
+              <span className="font-bold text-[#c9184a]">You:</span> “Are we best friends?”
+            </p>
           </div>
 
-          <button
-            onClick={onNext}
-            className="py-3.5 px-8 rounded-full bg-gradient-to-r from-[#ff4d6d] to-[#ff758f] text-white font-semibold text-sm shadow-md active:scale-95 transition-transform cursor-pointer"
-          >
-            <span>Unlock Your Secret 🔐</span>
-          </button>
-        </motion.div>
-      )}
+          <div className="bg-[#fcf4dd]/80 rounded-2xl px-4 py-3 border border-[#ffd166]/40">
+            <p className="text-xs sm:text-sm text-[#2b1b22] font-medium leading-relaxed break-words">
+              <span className="font-bold text-[#800f2f]">Me:</span> “Obviously.”
+            </p>
+          </div>
+
+          <div className="bg-[#fff0f3] rounded-2xl px-4 py-3 border border-[#ffd1dc]/60">
+            <p className="text-xs sm:text-sm text-[#2b1b22] font-medium leading-relaxed break-words">
+              <span className="font-bold text-[#c9184a]">You:</span> “Then why does this whole thing look like a suspiciously romantic love story?”
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-r from-[#ffe5ec] to-[#ffccd5] rounded-2xl px-4 py-3.5 border border-[#ff758f]/40 shadow-xs">
+            <p className="font-handwriting text-lg sm:text-xl text-[#c9184a] font-bold leading-snug break-words">
+              “Don't ask questions, {BIRTHDAY_CONFIG.recipientName} ({BIRTHDAY_CONFIG.nickname}). Just let the drama unfold.” 😂❤️
+            </p>
+          </div>
+        </div>
+
+        <p className="text-[11px] text-center text-[#843b62]/80 pt-1 tracking-wider font-medium">
+          Two besties • One shared brain cell • Infinite love
+        </p>
+      </motion.div>
+
+      {/* Unlock Action Button */}
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.35 }}
+        className="w-full flex flex-col items-center gap-2 shrink-0 pb-2"
+      >
+        <button
+          id="unlock-secret-btn"
+          onClick={onNext}
+          className="w-full max-w-[280px] h-12 rounded-full bg-gradient-to-r from-[#ff4d6d] to-[#ff758f] text-white font-semibold text-sm shadow-[0_4px_16px_rgba(255,77,109,0.35)] active:scale-95 transition-transform flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <span>Unlock Your Secret 🔐</span>
+        </button>
+        <span className="text-[11px] text-[#843b62]/60">
+          A secret passcode is required ahead ✨
+        </span>
+      </motion.div>
     </div>
   );
 };

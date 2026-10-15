@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" width="100%" height="100%">
+  <defs>
+    <!-- Soft Drop Shadow -->
+    <filter id="softShad" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#3c096c" flood-opacity="0.18"/>
+    </filter>
+    <linearGradient id="bodyGradSweet" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3d348b"/>
+      <stop offset="60%" stop-color="#241e4e"/>
+      <stop offset="100%" stop-color="#140f2d"/>
+    </linearGradient>
+    <linearGradient id="tummyGradSweet" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fdf0ed"/>
+    </linearGradient>
+    <linearGradient id="heartGradSweet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff758f"/>
+      <stop offset="100%" stop-color="#ff4d6d"/>
+    </linearGradient>
+    <linearGradient id="beakGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe66d"/>
+      <stop offset="100%" stop-color="#ff9f1c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="120" cy="242" rx="65" ry="12" fill="#2b1b22" opacity="0.15"/>
+
+  <!-- Feet -->
+  <ellipse cx="95" cy="235" rx="18" ry="10" fill="url(#beakGrad)"/>
+  <ellipse cx="145" cy="235" rx="18" ry="10" fill="url(#beakGrad)"/>
+
+  <!-- Main Body -->
+  <g filter="url(#softShad)">
+    <!-- Outer Body -->
+    <path d="M 120,40 C 65,40 50,90 50,150 C 50,210 75,235 120,235 C 165,235 190,210 190,150 C 190,90 175,40 120,40 Z" fill="url(#bodyGradSweet)"/>
+
+    <!-- Left Flipper / Wing -->
+    <path d="M 52,125 C 30,140 25,170 38,185 C 48,175 58,155 58,135 Z" fill="#241e4e"/>
+    <!-- Right Flipper / Wing (Holding Heart) -->
+    <path d="M 188,125 C 208,138 212,168 198,185 C 190,175 182,155 182,135 Z" fill="#241e4e"/>
+
+    <!-- White Tummy -->
+    <path d="M 120,80 C 85,80 72,115 72,160 C 72,205 90,225 120,225 C 150,225 168,205 168,160 C 168,115 155,80 120,80 Z" fill="url(#tummyGradSweet)"/>
+
+    <!-- Cute Rosy Cheek Blush -->
+    <ellipse cx="88" cy="130" rx="10" ry="6" fill="#ff758f" opacity="0.6"/>
+    <ellipse cx="152" cy="130" rx="10" ry="6" fill="#ff758f" opacity="0.6"/>
+
+    <!-- Sweet Eyes with Sparkles -->
+    <!-- Left Eye -->
+    <circle cx="98" cy="112" r="8" fill="#1b1725"/>
+    <circle cx="96" cy="109" r="3" fill="#ffffff"/>
+    <circle cx="101" cy="115" r="1.5" fill="#ffffff"/>
+
+    <!-- Right Eye -->
+    <circle cx="142" cy="112" r="8" fill="#1b1725"/>
+    <circle cx="140" cy="109" r="3" fill="#ffffff"/>
+    <circle cx="145" cy="115" r="1.5" fill="#ffffff"/>
+
+    <!-- Beak -->
+    <path d="M 112,120 Q 120,132 128,120 Q 120,116 112,120 Z" fill="url(#beakGrad)"/>
+
+    <!-- Head Flower / Hair Clip -->
+    <g transform="translate(152, 58) rotate(15)">
+      <circle cx="-6" cy="0" r="5" fill="#ffb3c6"/>
+      <circle cx="6" cy="0" r="5" fill="#ffb3c6"/>
+      <circle cx="0" cy="-6" r="5" fill="#ffb3c6"/>
+      <circle cx="0" cy="6" r="5" fill="#ffb3c6"/>
+      <circle cx="0" cy="0" r="4" fill="#ffd166"/>
+    </g>
+
+    <!-- Sweet Penguin Holding Heart in front -->
+    <g transform="translate(120, 168)">
+      <path d="M 0, -18 C -14,-36 -42,-22 -36,8 C -30,34 0,50 0,50 C 0,50 30,34 36,8 C 42,-22 14,-36 0,-18 Z" fill="url(#heartGradSweet)" transform="scale(0.7) translate(0, -15)"/>
+      <!-- Soft highlight on heart -->
+      <path d="M -12,-15 C -20,-24 -30,-12 -26,2" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+    </g>
+
+    <!-- Tiny Flippers hugging the heart -->
+    <ellipse cx="98" cy="165" rx="10" ry="14" fill="#2b2353" transform="rotate(-30 98 165)"/>
+    <ellipse cx="142" cy="165" rx="10" ry="14" fill="#2b2353" transform="rotate(30 142 165)"/>
+  </g>
+
+  <!-- Floating Sparkles -->
+  <polygon points="50,60 52,66 58,68 53,72 55,78 50,74 45,78 47,72 42,68 48,66" fill="#ffd166"/>
+  <polygon points="190,45 192,50 197,51 193,55 194,60 190,57 186,60 187,55 183,51 188,50" fill="#ff758f"/>
+</svg>

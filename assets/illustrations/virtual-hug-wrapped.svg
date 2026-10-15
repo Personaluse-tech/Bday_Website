@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 260" width="100%" height="100%">
+  <defs>
+    <filter id="hugWShad" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#4a1525" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="char1Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff5f5"/>
+      <stop offset="50%" stop-color="#fed7e2"/>
+      <stop offset="100%" stop-color="#fbb6ce"/>
+    </linearGradient>
+    <linearGradient id="char2Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fefcbf"/>
+      <stop offset="50%" stop-color="#fbd38d"/>
+      <stop offset="100%" stop-color="#f6ad55"/>
+    </linearGradient>
+    <radialGradient id="hugWarmth" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff758f" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#ffccd5" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ffccd5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Warm Glow in center of hug -->
+  <circle cx="140" cy="140" r="95" fill="url(#hugWarmth)"/>
+
+  <!-- Ground Shadows -->
+  <ellipse cx="140" cy="242" rx="85" ry="12" fill="#2b1b22" opacity="0.14"/>
+
+  <!-- Hugging Characters Group -->
+  <g filter="url(#hugWShad)">
+    <!-- Character 1 (Pink Bear Mascot on Left) -->
+    <!-- Left Ear -->
+    <circle cx="85" cy="75" r="18" fill="#fed7e2"/>
+    <circle cx="85" cy="75" r="10" fill="#f687b3"/>
+    <!-- Body & Head (leaning in) -->
+    <ellipse cx="110" cy="155" rx="55" ry="60" fill="url(#char1Grad)"/>
+    <circle cx="115" cy="105" r="42" fill="url(#char1Grad)"/>
+
+    <!-- Character 2 (Warm Golden Mascot on Right) -->
+    <!-- Right Ear -->
+    <circle cx="195" cy="75" r="18" fill="#fbd38d"/>
+    <circle cx="195" cy="75" r="10" fill="#ed8936"/>
+    <!-- Body & Head (leaning in) -->
+    <ellipse cx="170" cy="155" rx="55" ry="60" fill="url(#char2Grad)"/>
+    <circle cx="165" cy="105" r="42" fill="url(#char2Grad)"/>
+
+    <!-- Closed Peaceful / Happy Squint Eyes for Character 1 -->
+    <path d="M 98,102 Q 106,108 114,102" stroke="#4a1525" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <!-- Cheeks & Snout 1 -->
+    <ellipse cx="94" cy="112" rx="8" ry="5" fill="#ff4d6d" opacity="0.6"/>
+    <ellipse cx="115" cy="114" rx="10" ry="7" fill="#ffffff"/>
+    <ellipse cx="115" cy="112" rx="4" ry="3" fill="#4a1525"/>
+    <path d="M 112,116 Q 115,120 118,116" stroke="#4a1525" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+
+    <!-- Closed Peaceful / Happy Squint Eyes for Character 2 -->
+    <path d="M 166,102 Q 174,108 182,102" stroke="#4a1525" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <!-- Cheeks & Snout 2 -->
+    <ellipse cx="186" cy="112" rx="8" ry="5" fill="#dd6b20" opacity="0.6"/>
+    <ellipse cx="165" cy="114" rx="10" ry="7" fill="#ffffff"/>
+    <ellipse cx="165" cy="112" rx="4" ry="3" fill="#4a1525"/>
+    <path d="M 162,116 Q 165,120 168,116" stroke="#4a1525" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+
+    <!-- Wrapping Arms (Interlocked in Warm Hug) -->
+    <!-- Pink arm wrapping around right friend -->
+    <path d="M 100,150 C 120,155 160,158 190,150 C 196,155 194,168 185,170 C 150,175 115,170 95,160 Z" fill="#fbb6ce"/>
+    <circle cx="188" cy="158" r="9" fill="#f687b3"/>
+
+    <!-- Yellow arm wrapping around left friend -->
+    <path d="M 180,145 C 160,150 120,152 90,145 C 84,150 86,163 95,165 C 130,170 165,165 185,155 Z" fill="#fbd38d"/>
+    <circle cx="92" cy="153" r="9" fill="#ed8936"/>
+
+    <!-- Hug Squish Mark / Heart in Center -->
+    <g transform="translate(140, 135)">
+      <path d="M 0,-15 C -12,-30 -34,-18 -28,8 C -22,28 0,42 0,42 C 0,42 22,28 28,8 C 34,-18 12,-30 0,-15 Z" fill="#ff4d6d" transform="scale(0.7) translate(0, -10)"/>
+    </g>
+  </g>
+
+  <!-- Floating Hearts Bursting from the Hug -->
+  <g>
+    <path d="M 140,40 C 135,28 118,30 122,44 C 126,58 140,68 140,68 C 140,68 154,58 158,44 C 162,30 145,28 140,40 Z" fill="#ff4d6d"/>
+    <path d="M 75,45 C 71,35 56,37 60,49 C 64,61 75,70 75,70 C 75,70 86,61 90,49 C 94,37 79,35 75,45 Z" fill="#ff758f" transform="scale(0.7) translate(25, 0)"/>
+    <path d="M 205,45 C 201,35 186,37 190,49 C 194,61 205,70 205,70 C 205,70 216,61 220,49 C 224,37 209,35 205,45 Z" fill="#ff758f" transform="scale(0.7) translate(95, 0)"/>
+
+    <circle cx="65" cy="100" r="3.5" fill="#ffd166"/>
+    <circle cx="215" cy="100" r="3.5" fill="#ffd166"/>
+    <circle cx="140" cy="15" r="4" fill="#ffd166"/>
+  </g>
+</svg>

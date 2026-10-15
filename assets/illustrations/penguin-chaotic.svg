@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" width="100%" height="100%">
+  <defs>
+    <filter id="softShadC" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#3c096c" flood-opacity="0.18"/>
+    </filter>
+    <linearGradient id="bodyGradChaos" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2b2d42"/>
+      <stop offset="60%" stop-color="#1d1e2c"/>
+      <stop offset="100%" stop-color="#0f1016"/>
+    </linearGradient>
+    <linearGradient id="tummyGradChaos" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#edf2f4"/>
+    </linearGradient>
+    <linearGradient id="partyHatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff006e"/>
+      <stop offset="50%" stop-color="#8338ec"/>
+      <stop offset="100%" stop-color="#3a86ff"/>
+    </linearGradient>
+    <linearGradient id="beakGradC" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe66d"/>
+      <stop offset="100%" stop-color="#fb5607"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="120" cy="242" rx="65" ry="12" fill="#2b1b22" opacity="0.15"/>
+
+  <!-- Feet (tilted, active stance) -->
+  <ellipse cx="90" cy="235" rx="19" ry="10" fill="url(#beakGradC)" transform="rotate(-8 90 235)"/>
+  <ellipse cx="150" cy="235" rx="19" ry="10" fill="url(#beakGradC)" transform="rotate(12 150 235)"/>
+
+  <!-- Main Body -->
+  <g filter="url(#softShadC)">
+    <!-- Outer Body -->
+    <path d="M 120,40 C 65,40 50,90 50,150 C 50,210 75,235 120,235 C 165,235 190,210 190,150 C 190,90 175,40 120,40 Z" fill="url(#bodyGradChaos)"/>
+
+    <!-- Left Wing Raised / Sassy wave -->
+    <path d="M 52,130 C 25,115 15,85 28,75 C 38,85 50,110 56,135 Z" fill="#1d1e2c"/>
+    <!-- Right Wing on Hip / confident pose -->
+    <path d="M 188,140 C 205,155 212,175 200,190 C 190,180 185,160 184,145 Z" fill="#1d1e2c"/>
+
+    <!-- White Tummy -->
+    <path d="M 120,80 C 85,80 72,115 72,160 C 72,205 90,225 120,225 C 150,225 168,205 168,160 C 168,115 155,80 120,80 Z" fill="url(#tummyGradChaos)"/>
+
+    <!-- Cheeky Smirk Beak -->
+    <path d="M 112,128 Q 124,140 134,124 Q 122,120 112,128 Z" fill="url(#beakGradC)"/>
+
+    <!-- Cool Sunglasses (Wayfarer style) -->
+    <g transform="translate(120, 108)">
+      <!-- Bridge -->
+      <rect x="-10" y="-3" width="20" height="5" rx="2" fill="#111111"/>
+      <!-- Left Lens Frame -->
+      <path d="M -45,-12 L -6,-12 C -8,12 -20,18 -40,16 C -48,15 -50,0 -45,-12 Z" fill="#111111"/>
+      <path d="M -42,-9 L -9,-9 C -11,10 -22,15 -38,13 C -45,12 -46,0 -42,-9 Z" fill="#3a86ff"/>
+      <!-- Reflection streak on left lens -->
+      <polygon points="-38,-7 -32,-7 -38,8 -42,8" fill="#ffffff" opacity="0.6"/>
+
+      <!-- Right Lens Frame -->
+      <path d="M 6,-12 L 45,-12 C 50,0 48,15 40,16 C 20,18 8,12 6,-12 Z" fill="#111111"/>
+      <path d="M 9,-9 L 42,-9 C 46,0 45,12 38,13 C 22,15 11,10 9,-9 Z" fill="#3a86ff"/>
+      <!-- Reflection streak on right lens -->
+      <polygon points="14,-7 20,-7 14,8 10,8" fill="#ffffff" opacity="0.6"/>
+    </g>
+
+    <!-- Jaunty Party Hat -->
+    <g transform="translate(132, 45) rotate(18)">
+      <polygon points="0,-48 -22,0 22,0" fill="url(#partyHatGrad)"/>
+      <!-- Hat Stripes -->
+      <path d="M -7,-32 L 7,-32 L 12,-20 L -12,-20 Z" fill="#ffe66d"/>
+      <path d="M -16,-10 L 16,-10 L 20,0 L -20,0 Z" fill="#06d6a0"/>
+      <!-- Pom-pom on Top -->
+      <circle cx="0" cy="-50" r="7" fill="#ffd166"/>
+    </g>
+  </g>
+
+  <!-- Chaos Confetti & Flying Stars -->
+  <rect x="35" y="60" width="7" height="15" rx="2" fill="#ff006e" transform="rotate(45 38 67)"/>
+  <rect x="25" y="120" width="6" height="14" rx="2" fill="#ffbe0b" transform="rotate(-30 28 127)"/>
+  <rect x="205" y="70" width="7" height="16" rx="2" fill="#70d6ff" transform="rotate(20 208 78)"/>
+  <circle cx="45" cy="40" r="4" fill="#8338ec"/>
+  <circle cx="210" cy="120" r="4" fill="#ff006e"/>
+  <!-- Little fire/sparkle near the waving hand -->
+  <polygon points="18,65 22,70 28,71 23,76 25,82 19,78 14,81 16,75 11,71 17,70" fill="#ffd166"/>
+</svg>

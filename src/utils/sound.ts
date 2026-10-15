@@ -147,6 +147,59 @@ class SoundService {
     osc.stop(now + 0.52);
   }
 
+  public playBowDraw() {
+    if (!this.isEnabled || this.isMuted || !this.audioCtx) return;
+    const now = this.audioCtx.currentTime;
+
+    const osc = this.audioCtx.createOscillator();
+    const gain = this.audioCtx.createGain();
+    const filter = this.audioCtx.createBiquadFilter();
+
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(140, now);
+    osc.frequency.linearRampToValueAtTime(320, now + 0.8);
+    osc.frequency.linearRampToValueAtTime(380, now + 1.1);
+
+    filter.type = 'lowpass';
+    filter.frequency.setValueAtTime(350, now);
+    filter.frequency.linearRampToValueAtTime(950, now + 0.8);
+
+    gain.gain.setValueAtTime(0.001, now);
+    gain.gain.linearRampToValueAtTime(0.18, now + 0.4);
+    gain.gain.linearRampToValueAtTime(0.12, now + 0.9);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 1.15);
+
+    osc.connect(filter);
+    filter.connect(gain);
+    gain.connect(this.audioCtx.destination);
+    osc.start(now);
+    osc.stop(now + 1.2);
+  }
+
+  public playMagicalSparkle() {
+    if (!this.isEnabled || this.isMuted || !this.audioCtx) return;
+    const notes = [1046.50, 1174.66, 1318.51, 1567.98, 1760.00, 2093.00, 2349.32, 2637.02];
+    notes.forEach((freq, idx) => {
+      setTimeout(() => {
+        if (!this.audioCtx || this.isMuted) return;
+        const now = this.audioCtx.currentTime;
+        const osc = this.audioCtx.createOscillator();
+        const gain = this.audioCtx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now);
+
+        gain.gain.setValueAtTime(0.09, now);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.45);
+
+        osc.connect(gain);
+        gain.connect(this.audioCtx.destination);
+        osc.start(now);
+        osc.stop(now + 0.5);
+      }, idx * 65);
+    });
+  }
+
   public playHeartBoom() {
     if (!this.isEnabled || this.isMuted || !this.audioCtx) return;
     const now = this.audioCtx.currentTime;
@@ -257,6 +310,35 @@ class SoundService {
     gain.connect(this.audioCtx.destination);
     osc.start(now);
     osc.stop(now + duration + 0.05);
+  }
+
+  public playKiss() {
+    if (!this.isEnabled || this.isMuted || !this.audioCtx) return;
+    const now = this.audioCtx.currentTime;
+    const osc = this.audioCtx.createOscillator();
+    const gain = this.audioCtx.createGain();
+
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(320, now);
+    osc.frequency.exponentialRampToValueAtTime(880, now + 0.08);
+    osc.frequency.exponentialRampToValueAtTime(450, now + 0.16);
+
+    gain.gain.setValueAtTime(0.01, now);
+    gain.gain.linearRampToValueAtTime(0.18, now + 0.04);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
+
+    osc.connect(gain);
+    gain.connect(this.audioCtx.destination);
+    osc.start(now);
+    osc.stop(now + 0.2);
+  }
+
+  public playRingReveal() {
+    if (!this.isEnabled || this.isMuted || !this.audioCtx) return;
+    const chords = [659.25, 880.00, 1046.50, 1318.51];
+    chords.forEach((freq, idx) => {
+      setTimeout(() => this.playChime(freq, 0.6, 0.2), idx * 80);
+    });
   }
 }
 

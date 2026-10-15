@@ -10,13 +10,13 @@ const BIRTHDAY_CONFIG = {
   // ----------------------------------------------------------------------------
   // 1. BASIC DETAILS
   // ----------------------------------------------------------------------------
-  recipientName: "Maya",        // Replace with her name
+  recipientName: "Anifa",       // Replace with her name
   senderName: "Your Bestie",    // Replace with your name/nickname
   age: 21,                      // Her birthday age (optional display)
   
   // The secret passcode she needs to enter on the Vault screen.
   // Can be 4 to 6 digits (e.g., her birthday "1024", "0815", "1234", etc.)
-  secretPassword: "0824",
+  secretPassword: "1517",
   
   // Number of stars generated in the "Little Universe" scene (e.g., her age or 20)
   starCount: 20,
@@ -53,7 +53,7 @@ const BIRTHDAY_CONFIG = {
     heading: "A Little Secret Is Waiting",
     subheading: "Only one person in the universe knows the key.",
     prompt: "Enter your secret birthday passcode",
-    hint: "Hint: Think of our special date or your birthday (Default: 0824)",
+    hint: "Hint: Think of our special date or secret code ✨",
     
     // Playful messages when she types the wrong passcode
     wrongPasswordMessages: [

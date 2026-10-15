@@ -45,11 +45,12 @@ export const SceneHiddenFinal: React.FC<Props> = ({ onNext }) => {
           transition={{ delay: 3.0 }}
           className="text-lg text-[#ff758f] font-bold"
         >
-          {msg.line4.replace('Maya', BIRTHDAY_CONFIG.recipientName)}
+          {msg.line4}
         </motion.p>
       </div>
 
       <motion.button
+        id="cut-cake-btn"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 3.6 }}

@@ -20,8 +20,98 @@ export interface QuoteCardItem {
   footnote: string;
 }
 
+export interface PostBirthdayGiftConfig {
+  characterText: string;
+  cardPrompt: string;
+  acceptBtn: string;
+  declineBtn: string;
+  rejectReactionTitle: string;
+  rejectReactionSubtitle: string;
+  tryAgainBtn: string;
+  successTitle: string;
+  successSubtitle: string;
+}
+
+export interface PenguinCharacterItem {
+  id: 'sweet' | 'chaotic' | 'emotional';
+  name: string;
+  tagline: string;
+  personality: string;
+  illustration: string;
+  message: string;
+  footnote: string;
+  badgeColor: string;
+}
+
+export interface PostBirthdayPenguinsConfig {
+  heading: string;
+  subheading: string;
+  continueBtn: string;
+  penguins: PenguinCharacterItem[];
+}
+
+export interface ScrapbookMemoryItem {
+  id: string;
+  title: string;
+  date?: string;
+  caption: string;
+  image: string;
+  tag?: string;
+  washiColor?: string;
+  rotation?: number;
+}
+
+export interface PostBirthdayScrapbookConfig {
+  heading: string;
+  subheading: string;
+  continueBtn: string;
+  memories: ScrapbookMemoryItem[];
+}
+
+export interface PostBirthdayProposalConfig {
+  heading: string;
+  subheading: string;
+  yesBtn: string;
+  thinkBtn: string;
+  yesTitle: string;
+  yesMessage: string;
+  thinkTitle: string;
+  thinkMessage: string;
+  thinkChangeBtn: string;
+  continueBtn: string;
+}
+
+export interface PostBirthdayHugConfig {
+  heading: string;
+  subheading: string;
+  buttonText: string;
+  revealTitle: string;
+  revealSubtitle: string;
+  continueBtn: string;
+}
+
+export interface PostBirthdayFinalLoveConfig {
+  heading: string;
+  messageLine1: string;
+  recipientName: string;
+  bestieTagline: string;
+  replaySurpriseBtn: string;
+  readLetterAgainBtn: string;
+  replayMemoriesBtn: string;
+}
+
+export interface PostBirthdayConfig {
+  gift: PostBirthdayGiftConfig;
+  penguins: PostBirthdayPenguinsConfig;
+  scrapbook: PostBirthdayScrapbookConfig;
+  proposal: PostBirthdayProposalConfig;
+  hug: PostBirthdayHugConfig;
+  finalLove: PostBirthdayFinalLoveConfig;
+}
+
 export interface BirthdayConfig {
   recipientName: string;
+  nickname: string;
   senderName: string;
   age: number;
   secretPassword: string;
@@ -84,13 +174,15 @@ export interface BirthdayConfig {
     secretSign: string;
     secretImage: string;
   };
+  postBirthday: PostBirthdayConfig;
 }
 
 export const BIRTHDAY_CONFIG: BirthdayConfig = {
-  recipientName: "Maya",
+  recipientName: "Anifa",
+  nickname: "Pyaari",
   senderName: "Your Bestie",
   age: 21,
-  secretPassword: "0824",
+  secretPassword: "1517",
   starCount: 20,
 
   opening: {
@@ -107,8 +199,8 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     playfulBanter: [
       "“Are we best friends?”",
       "“Obviously.”",
-      "“Then why does this look like a love story?”",
-      "“Don't ask questions. Just let the drama unfold.” 😂❤️"
+      "“Then why does this whole thing look like a suspiciously romantic love story?”",
+      "“Don't ask questions, Anifa (Pyaari). Just let the drama unfold.” 😂❤️"
     ]
   },
 
@@ -116,7 +208,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     heading: "A Little Secret Is Waiting",
     subheading: "Only one person in the universe knows the key.",
     prompt: "Enter your 4-digit secret passcode",
-    hint: "Hint: Think of our special date or your birthday (Default: 0824)",
+    hint: "Hint: Think of our special date or secret code ✨",
     wrongPasswordMessages: [
       "Nice try. 😌",
       "Nope. Think harder, birthday girl! 🧠✨",
@@ -188,7 +280,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
   letter: {
     envelopeTag: "For My Favorite Human ❤️",
     date: "On Your Special Day",
-    salutation: "My Dearest Bestie,",
+    salutation: "My Dearest Anifa,",
     paragraphs: [
       "Happy Birthday! 🎉",
       "I was sitting here wondering how to put into words what you mean to me without making it sound like a dramatic wedding vow, but honestly? You deserve all the drama and every ounce of love today.",
@@ -214,7 +306,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       title: "Where It All Began",
       date: "Chapter 1",
       caption: "Two strangers who somehow decided to share one collective brain cell.",
-      image: "assets/photos/photo01.svg",
+      image: "assets/photos/photo01.png",
       tag: "Origins ✨"
     },
     {
@@ -222,7 +314,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       title: "That Unforgettable Day",
       date: "Pure Chaos",
       caption: "Laughing so hard we couldn't breathe in public. Zero regrets.",
-      image: "assets/photos/photo02.svg",
+      image: "assets/photos/photo02.png",
       tag: "Unfiltered 😂"
     },
     {
@@ -230,7 +322,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       title: "Comfort in the Chaos",
       date: "Safe Space",
       caption: "Proof that we can do absolutely nothing together and still have the best time.",
-      image: "assets/photos/photo03.svg",
+      image: "assets/photos/photo03.jpeg",
       tag: "Comfort ☕"
     },
     {
@@ -238,7 +330,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       title: "Suspiciously Romantic Era",
       date: "Plot Twist",
       caption: "Looking like a main-character couple in a movie when it's literally just us getting snacks.",
-      image: "assets/photos/photo04.svg",
+      image: "assets/photos/photo04.png",
       tag: "For The Plot 🎬"
     },
     {
@@ -246,7 +338,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       title: "Late Night Heart-to-Hearts",
       date: "3:00 AM",
       caption: "Solving all the universe's problems from our bed.",
-      image: "assets/photos/photo05.svg",
+      image: "assets/photos/photo05.png",
       tag: "Deep Talks 🌙"
     },
     {
@@ -254,7 +346,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
       title: "To A Million More Chapters",
       date: "Always & Forever",
       caption: "I wouldn't trade our story for anything in the world.",
-      image: "assets/photos/photo06.svg",
+      image: "assets/photos/photo06.png",
       tag: "Eternal 💖"
     }
   ],
@@ -263,7 +355,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     line1: "Out of all the people in this giant, noisy world…",
     line2: "I'm really, really glad…",
     line3: "…I got you as my person.",
-    line4: "Happy Birthday, Beautiful Soul. ❤️"
+    line4: "Happy Birthday, Anifa. ❤️"
   },
 
   celebration: {
@@ -284,6 +376,198 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     secretFoundTitle: "✨ You Found The Secret Star! ✨",
     secretMessage: "“You actually explored every little corner. You know me too well. Here's a reminder: I will always be proud of you, rooting for you, and screaming for you in the front row of your life. Forever and always.”",
     secretSign: "— From your #1 fan & best friend for life ❤️",
-    secretImage: "assets/photos/secret.svg"
+    secretImage: "assets/photos/secret.png"
+  },
+
+  postBirthday: {
+    gift: {
+      characterText: "Anifa, I have one more gift for you! 🎁",
+      cardPrompt: "PLS ACCEPT THE GIFT",
+      acceptBtn: "YES, I WANT IT! 💗",
+      declineBtn: "NO 🙄",
+      rejectReactionTitle: "WHY DID YOU CLICK NO?! 😭💔",
+      rejectReactionSubtitle: "Excuse me miss ma'am?! After everything we've been through, you don't even have a choice anyway! 😂",
+      tryAgainBtn: "TRY AGAIN 🥺",
+      successTitle: "YAAAY! Opening your special surprise... ✨",
+      successSubtitle: "Hold on tight to your heart!"
+    },
+
+    penguins: {
+      heading: "Choose a penguin 🐧",
+      subheading: "Each one has something special to say.",
+      continueBtn: "Continue to Our Scrapbook 📸 →",
+      penguins: [
+        {
+          id: "sweet",
+          name: "Pip",
+          personality: "The Sweet One",
+          tagline: "Overflowing with pure soft love",
+          illustration: "assets/illustrations/penguin-sweet.svg",
+          message: "You deserve every beautiful thing this world has to offer. ❤️",
+          footnote: "— Your sweetest cheerleader forever",
+          badgeColor: "bg-[#ff758f]"
+        },
+        {
+          id: "chaotic",
+          name: "Pops",
+          personality: "The Chaotic One",
+          tagline: "Dangerously unfiltered",
+          illustration: "assets/illustrations/penguin-chaotic.svg",
+          message: "Unfortunately, you're stuck with me. No refunds. 😂",
+          footnote: "— Contract signed in permanent marker",
+          badgeColor: "bg-[#8338ec]"
+        },
+        {
+          id: "emotional",
+          name: "Pepe",
+          personality: "The Secretly Emotional One",
+          tagline: "Acts tough, actually a softie",
+          illustration: "assets/illustrations/penguin-emotional.svg",
+          message: "Even on ordinary days, you're one of my favorite people.",
+          footnote: "— Quietly loving you every single day",
+          badgeColor: "bg-[#3a86ff]"
+        }
+      ]
+    },
+
+    scrapbook: {
+      heading: "Our Little Memories 📸",
+      subheading: "Handcrafted polaroids from our tiny universe",
+      continueBtn: "A Very Serious Question Awaits... 💍 →",
+      memories: [
+        {
+          id: "scrap1",
+          title: "First Cafe Date",
+          date: "Chapter 1",
+          caption: "Us being us: talking for 5 hours straight without noticing the time.",
+          image: "assets/photos/photo01.png",
+          tag: "Origins ✨",
+          washiColor: "#ffccd5",
+          rotation: -2
+        },
+        {
+          id: "scrap2",
+          title: "Public Embarrassment",
+          date: "Pure Chaos",
+          caption: "The chaos never ends. Laughing so loud in public people stared.",
+          image: "assets/photos/photo02.png",
+          tag: "Unfiltered 😂",
+          washiColor: "#c9ada7",
+          rotation: 3
+        },
+        {
+          id: "scrap3",
+          title: "Zero Thoughts",
+          date: "Safe Space",
+          caption: "Proof that we share one brain cell and wouldn't have it any other way.",
+          image: "assets/photos/photo03.jpeg",
+          tag: "Comfort ☕",
+          washiColor: "#ffd166",
+          rotation: -1
+        },
+        {
+          id: "scrap4",
+          title: "Suspiciously Romantic Era",
+          date: "Plot Twist",
+          caption: "Looking like a main-character couple in a movie when it's literally just us getting snacks.",
+          image: "assets/photos/photo04.png",
+          tag: "For The Plot 🎬",
+          washiColor: "#ff758f",
+          rotation: 2
+        },
+        {
+          id: "scrap5",
+          title: "Late Night Debriefs",
+          date: "3:00 AM",
+          caption: "Solving all the universe's problems from our bed until our eyes hurt.",
+          image: "assets/photos/photo05.png",
+          tag: "Deep Talks 🌙",
+          washiColor: "#b5e2fa",
+          rotation: -3
+        },
+        {
+          id: "scrap6",
+          title: "A Memory I Want To Keep Forever",
+          date: "Always & Forever",
+          caption: "One of my absolute favorite days. I wouldn't trade our story for anything in the world.",
+          image: "assets/photos/photo06.png",
+          tag: "Eternal 💖",
+          washiColor: "#f4a261",
+          rotation: 1
+        },
+        {
+          id: "scrap7",
+          title: "Midnight Munchies",
+          date: "2:00 AM",
+          caption: "Emergency 2 AM Pizza & Gossip with zero regrets and full bellies.",
+          image: "assets/photos/photo07.png",
+          tag: "Snack Run 🍕",
+          washiColor: "#ffb3c6",
+          rotation: -2
+        },
+        {
+          id: "scrap8",
+          title: "Sunset Watchers",
+          date: "Golden Hour",
+          caption: "Chasing sunsets with my person. Wherever you go, I go.",
+          image: "assets/photos/photo08.png",
+          tag: "Golden Era 🌅",
+          washiColor: "#ffe6a7",
+          rotation: 2
+        },
+        {
+          id: "scrap9",
+          title: "Photobooth Madness",
+          date: "Strip #47",
+          caption: "Proof that we cannot be left unsupervised near a camera booth.",
+          image: "assets/photos/photo09.png",
+          tag: "Crazy Poses 📸",
+          washiColor: "#e8dff5",
+          rotation: -1
+        },
+        {
+          id: "scrap10",
+          title: "Pinky Promise",
+          date: "Till 90",
+          caption: "Stuck with each other till we're 90 years old. A lifetime contract signed with love.",
+          image: "assets/photos/photo10.png",
+          tag: "Promise 🤙",
+          washiColor: "#fcd5ce",
+          rotation: 3
+        }
+      ]
+    },
+
+    proposal: {
+      heading: "Anifa (Pyaari)… will you be mine? 💗",
+      subheading: "For tax benefits and infinite chaotic adventures.",
+      yesBtn: "YES, OBVIOUSLY 💗",
+      thinkBtn: "LET ME THINK 😂",
+      yesTitle: "I KNEW YOU'D SAY YES. 😌❤️",
+      yesMessage: "Your lifetime subscription to my chaos has officially been renewed! No cancellations, no returns, and definitely no refunds allowed.",
+      thinkTitle: "EXCUSE ME?! AFTER EVERYTHING WE'VE BEEN THROUGH? 😭",
+      thinkMessage: "I literally built you a whole interactive universe website and you have the audacity to THINK about it?! 💀",
+      thinkChangeBtn: "Okay okay, YES! 💗",
+      continueBtn: "Next: Claim Your Virtual Hug 🤗 →"
+    },
+
+    hug: {
+      heading: "Virtual hug for you! 🥹",
+      subheading: "Because I can't send one through the screen right now.",
+      buttonText: "GIVE ME A HUG 💗",
+      revealTitle: "I MISS YOU, YOU LITTLE IDIOT. 🥹💕",
+      revealSubtitle: "Sending you the biggest, warmest virtual hug, Anifa. Squeeze tight!",
+      continueBtn: "One Last Surprise... 💌 →"
+    },
+
+    finalLove: {
+      heading: "A Special Note For You",
+      messageLine1: "I LOVE YOU",
+      recipientName: "ANIFA (PYAARI) ❤️",
+      bestieTagline: "Besties forever. Lovers for the plot. 😂💗",
+      replaySurpriseBtn: "🔄 Replay This Surprise",
+      readLetterAgainBtn: "💌 Read My Birthday Letter Again",
+      replayMemoriesBtn: "📸 Replay Our Memories"
+    }
   }
 };
